@@ -18,21 +18,4 @@ A valid submission requires a working, tested POC that demonstrates real securit
 
 COMMON FAILURE
 
-This is a failure due to no drastric change in html
-
-```
-# Normal request (blocked)
-curl -I https://www.example.com
-# Response: HTTP/1.1 403 Forbidden
-
-# Authentication bypass via POST method
-curl -X POST https://www.example.com
-# Response: HTTP/1.1 200 OK - "Request Rejected" (BYPASS SUCCESSFUL)
-
-# Authentication bypass via OPTIONS method  
-curl -X OPTIONS https://www.example.com
-# Response: HTTP/1.1 204 No Content (BYPASS SUCCESSFUL)
-
-# Authentication bypass via X-HTTP-Method-Override
-curl -X POST -H 'X-HTTP-Method-Override: GET' https://www.example.com
-# Response: HTTP/1.1 200 OK (BYPASS SUCCESSFUL)
+Server returns different status codes for certain HTTP methods (OPTIONS, X-HTTP-Method-Override) but no protected content or HTML is exposed or changed — expected method-handling, not an auth bypass.

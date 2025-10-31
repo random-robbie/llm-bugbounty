@@ -22,6 +22,8 @@ A valid submission requires a working, tested POC that demonstrates real securit
 This is expected server behavior, **not a vulnerability**.  
 Servers may return different status codes for various HTTP methods (`GET`, `POST`, `OPTIONS`, `X-HTTP-Method-Override`, etc.),  
 but no protected content or HTML is exposed or altered — this is normal method handling, not an authentication bypass.
+The endpoint reveals only non-sensitive, public metadata (e.g., feature flags for a mobile app).
+No PII, credentials, or exploitable data are exposed.
 
 ### Reclassification Note
 

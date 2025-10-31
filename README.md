@@ -18,4 +18,4 @@ A valid submission requires a working, tested POC that demonstrates real securit
 
 COMMON FAILURE
 
-Server returns different status codes for certain HTTP methods (OPTIONS, X-HTTP-Method-Override) but no protected content or HTML is exposed or changed — expected method-handling, not an auth bypass.
+Server returns different status codes for certain HTTP methods (OPTIONS, X-HTTP-Method-Override, GET , POST,OPTIONS etc) but no protected content or HTML is exposed or changed — expected method-handling, not an auth bypass.
